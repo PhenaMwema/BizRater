@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccount">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="81dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/pbLoadSpinner"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-7dp"
+                android:layout_weight="1"
+                android:indeterminate="true"
+                android:max="100"
+                android:progress="50"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="InefficientWeight" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+            tools:ignore="NotSibling">
+
+
+            <ScrollView
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:id="@+id/llCreateAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:baselineAligned="false"
+                    android:orientation="vertical"
+                    tools:ignore="ScrollViewSize,TooDeepLayout,UselessParent">
+
+
+
+                    <TextView
+                        android:id="@+id/tvCreateAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_weight="1"
+                        android:text="Create Account"
+                        android:textAlignment="center"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="24sp"
+                        tools:ignore="HardcodedText,InefficientWeight" />
+
+                    <!--ImageView
+                        android:id="@+id/btnLoadPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:padding="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="8dp"
+                        app:srcCompat="@drawable/agricow_banner"
+                        tools:ignore="ContentDescription" />
+
+
+                    <TextView
+                        android:id="@+id/tvAgricowSignupDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Enter your details below to create an account"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" /-->
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tilName"
+                        style="@style/Widget.Design.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="24dp">
+
+                        <EditText
+                            android:id="@+id/txName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/cardview_shadow_start_color"
+                            android:hint="Username"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            tools:ignore="HardcodedText,UnusedAttribute" />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tilEmail"
+                        style="@style/Widget.Design.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="24dp">
+
+                        <EditText
+                            android:id="@+id/txEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/cardview_shadow_start_color"
+                            android:hint="Email address or phone number"
+                            android:inputType="textEmailAddress"
+                            android:textSize="16sp"
+                            tools:ignore="HardcodedText,UnusedAttribute" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tilPswrd"
+                        style="@style/Widget.Design.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="24dp"
+                        app:passwordToggleEnabled = "true"
+                        app:passwordToggleTint="@color/colorSecondaryText"
+                        app:passwordToggleTintMode="src_atop">
+
+                        <EditText
+                            android:id="@+id/txPswrd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/cardview_shadow_start_color"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:textSize="16sp"
+                            tools:ignore="HardcodedText,UnusedAttribute" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tilPswrd2"
+                        style="@style/Widget.Design.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="24dp"
+                        app:passwordToggleEnabled = "true"
+                        app:passwordToggleTint="@color/colorSecondaryText"
+                        app:passwordToggleTintMode="src_atop"
+                        android:hint="Confirm password">
+
+                        <EditText
+                            android:id="@+id/txPswrd2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/cardview_shadow_start_color"
+                            android:inputType="textPassword"
+                            android:textSize="16sp"
+                            tools:ignore="HardcodedText,UnusedAttribute" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RadioButton
+                        android:id="@+id/rbusiness"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register as a business"/>
+
+                    <RadioButton
+                        android:id="@+id/ruser"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register as a user"/>
+
+                    <Button
+                        android:id="@+id/btnCreateAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center"
+                        android:text="Create Account"
+                        android:background="@color/colorAccent"
+                        android:textColor="@color/colorBottomBarButton"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

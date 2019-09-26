@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "410951976401",
+    "firebase_url": "https://bizrater-5f830.firebaseio.com",
+    "project_id": "bizrater-5f830",
+    "storage_bucket": "bizrater-5f830.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410951976401:android:cd6fdd728f61a2edffccf0",
+        "android_client_info": {
+          "package_name": "com.phenamwema.bizrater"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410951976401-9a51g5mj7tp4jkjul5ul1n5i74pjvb6d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.phenamwema.bizrater",
+            "certificate_hash": "176926196a681df2d890d983320594ba13bf64c4"
+          }
+        },
+        {
+          "client_id": "410951976401-diitjgram92b6v3ka2su7p96d7i9tvgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3IZgrY4dDvH7PO5bDB2ACOAza-YKzb0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410951976401-diitjgram92b6v3ka2su7p96d7i9tvgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
